@@ -8,14 +8,28 @@ body {
     padding: 10px;
     margin: 10px;
     background: coral;
+    border-radius: 10px;
 }
 
 .assignment img {
     scale: 97%;
     padding: 10px;
+    border: 10px solid #fff;
+}
+
+.assignment img :hover{
+    border: 40px dashed crimson;
 }
 
 h1 {
     color: midnightblue;
     text-align: center;
+}
+
+h1 :hover{
+    color: blanchedalmond;
+}
+
+a{
+    text-decoration: none;
 }
