@@ -4,9 +4,15 @@ body {
 }
 
 .assignment{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.assignment{
     display: flexbox;
     padding: 10px;
     margin: 10px;
+    padding: 20px 10px;
     background: coral;
     border-radius: 10px;
 }
@@ -20,7 +26,7 @@ body {
 .assignment img :hover{
     border: 40px dashed crimson;
 }
-
+ 
 h1 {
     color: midnightblue;
     text-align: center;
