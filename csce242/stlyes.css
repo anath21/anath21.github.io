@@ -23,7 +23,7 @@ body {
     color: brown;
 }
 
-#assignmentlinks:hover {
+#assignmentlinks a:hover {
     background: burlywood;
 }
 
