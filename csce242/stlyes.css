@@ -1,0 +1,35 @@
+body {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background: burlywood;
+    color: brown;
+}
+
+
+/* Structure */
+
+#content {
+    background: lemonchiffon;
+    padding-bottom: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 80%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+#assignmentlinks a {
+    text-decoration: none;
+    background: lemonchiffon;
+    color: brown;
+}
+
+#assignmentlinks:hover {
+    background: burlywood;
+}
+
+
+/*Typography*/
+
+h1 {
+    color: chocolate;
+}
