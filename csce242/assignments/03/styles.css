@@ -45,6 +45,7 @@ body {
 
 #itemheader {
     text-indent: 40px;
+    color:#8b0000;
 }
 
 #item {
@@ -57,10 +58,6 @@ body {
     color: #8b0000;
 }
 
-.imgtwo {
-    
-}
-
 .columns {
     border: 1px solid #8b0000;
 }
@@ -69,21 +66,23 @@ body {
     border-bottom: 1px solid #8b0000;
 }
 
+
 /*Typography*/
 
-h1 {
+h1,
+h5 {
     text-align: center;
-    color: black;
+    color: #8b0000;
+}
+
+h3 {
+    color:#8b0000;
 }
 
 /* For larger resolutions */
 @media only screen and (min-width: 768px) {
     .columns {
         display: flex;
-    }
-
-    .columns section {
-        padding: 5px 20px;
     }
 
     .one,
@@ -95,15 +94,16 @@ h1 {
         border-right: 1px solid #8b0000;
     }
 
+    .split {
+        flex: 1;
+    }
+
     .two {
         flex: 3;
     }
 
     .columns img {
         max-width: 80%;
-        /* for centering*/
-        display: block;
-        margin: auto;
     }
 
     #main-nav li {
