@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: coral;
+}
+
+
+/* Structure */
+
+#content {
+    padding: 5px;
+    width: 80%;
+    margin: auto;   /*Center horizontally*/
+    border-radius: 5px; /*Round the corners*/
+}
+
+#main-header, 
+#main-content {
+    background-color: #DDEAF3;
+    margin-bottom: 10px;
+}
+
+#main-footer {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Main Navigation*/
+
+#main-nav ul {
+    padding-left: 0; /*Moves the list left*/
+}
+
+#main-nav li {
+    list-style-type: none; /* Removes Bullet*/
+    background: lightcoral;
+    padding-bottom: 5px;
+    border-bottom: 1px solid black;
+    text-align: center;
+}
+
+#main-nav a {
+    text-decoration: none; /*Remove underline*/
+    color: white;
+}
+
+#itemheader {
+    text-indent: 40px;
+}
+
+#item {
+    list-style-type: none;
+    text-decoration: none;
+    color: lightcoral;
+}
+
+#itemtext {
+    color: #8b0000;
+}
+
+.imgtwo {
+    
+}
+
+.columns {
+    border: 1px solid #8b0000;
+}
+
+.one {
+    border-bottom: 1px solid #8b0000;
+}
+
+/*Typography*/
+
+h1 {
+    text-align: center;
+    color: black;
+}
+
+/* For larger resolutions */
+@media only screen and (min-width: 768px) {
+    .columns {
+        display: flex;
+    }
+
+    .columns section {
+        padding: 5px 20px;
+    }
+
+    .one,
+    #main-nav li {
+        flex: 1;
+    }
+
+    .one {
+        border-right: 1px solid #8b0000;
+    }
+
+    .two {
+        flex: 3;
+    }
+
+    .columns img {
+        max-width: 80%;
+        /* for centering*/
+        display: block;
+        margin: auto;
+    }
+
+    #main-nav li {
+        text-align: center;
+        border-bottom: 2px solid transparent;
+    }
+
+    #main-nav :hover {
+        border-bottom: 2px solid black;
+    }
+}
