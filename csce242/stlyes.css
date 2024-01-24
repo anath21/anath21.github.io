@@ -12,24 +12,53 @@ body {
     padding-bottom: 3px;
     padding-left: 10px;
     padding-right: 10px;
-    width: 80%;
     margin: auto;
     border-radius: 5px;
 }
 
-#assignmentlinks a {
-    text-decoration: none;
-    background: lemonchiffon;
-    color: brown;
+#assignment-header {
+    text-align: center;
 }
 
-#assignmentlinks a:hover {
+#assignment1 {
+    background: burlywood;
+    justify-content: center;
+    align-content: center;
+}
+
+#assignment2 {
     background: burlywood;
 }
 
+#assignment3 {
+    background: burlywood;
+}
 
 /*Typography*/
 
 h1 {
     color: chocolate;
+}
+
+/* For larger resolutions */
+@media only screen and (min-width: 768px) {
+    .columns {
+        display: flex;
+        padding-right: 5px;
+    }
+
+    #assignment1 {
+        flex: 1;
+        margin: 5px;
+    }
+
+    #assignment2 {
+        flex: 1;
+        margin: 5px;
+    }
+
+    #assignment3 {
+        flex: 1;
+        margin: 5px;
+    }
 }
