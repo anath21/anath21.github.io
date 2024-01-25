@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #FFFFFF;
+}
+
+
+/* Structure */
+
+#content {
+    background: #fff;
+    padding: 5px;
+    width: 80%;
+    margin: auto;   /*Center horizontally*/
+    border-radius: 5px; /*Round the corners*/
+}
+
+#header {
+    background: #000;
+}
+
+#header-top {
+    color: white;
+    list-style-type: none;
+    padding-bottom: 5px;
+}
+
+#header-top li {
+    font-size: x-small;
+}
+
+#header-bottom {
+    background: #73000A;
+    color: white;
+    font-size:x-large;
+    margin-top: 0px;
+    padding: 15px;
+}
+
+#uofsclogo {
+    position: relative;
+    padding: 10px;
+}
+
+/*Typography*/
+
+h1 {
+    color: gray;
+}
+
+@media only screen and (min-width: 768px) {
+    #header-top li, a {
+        display: inline-block;
+        color: #fff;
+        list-style-type: none; /* Removes Bullet*/
+        padding-bottom: 5px;
+        padding-right: 5px;
+        text-decoration: none;
+    }
+    
+    #header-top {
+        position: absolute;
+        right: 75px;
+    }
+}
