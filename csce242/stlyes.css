@@ -20,18 +20,10 @@ body {
     text-align: center;
 }
 
-#assignment1 {
+#assignment {
     background: burlywood;
     justify-content: center;
     align-content: center;
-}
-
-#assignment2 {
-    background: burlywood;
-}
-
-#assignment3 {
-    background: burlywood;
 }
 
 /*Typography*/
@@ -47,17 +39,7 @@ h1 {
         padding-right: 5px;
     }
 
-    #assignment1 {
-        flex: 1;
-        margin: 5px;
-    }
-
-    #assignment2 {
-        flex: 1;
-        margin: 5px;
-    }
-
-    #assignment3 {
+    #assignment {
         flex: 1;
         margin: 5px;
     }
