@@ -41,24 +41,142 @@ body {
     padding: 10px;
 }
 
-/*Typography*/
-
-h1 {
-    color: gray;
+.menu li, a {
+    color: black;
+    list-style-type: none;
 }
 
+#body-header {
+    color: #73000A;
+}
+
+.body-text {
+    margin-bottom: 3px;
+    border-bottom: 2px solid lightgray;
+}
+
+#body-info :hover {
+    background: #F0F0F0;
+}
+
+.body-secondary-header {
+    color: #73000A;
+    font-weight: bold;
+    padding: 5px;
+}
+
+#text-link {
+    color: #76160A;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+#footer {
+    background: #ECECEC;
+    display: flex;
+}
+
+#footer-top {
+    color: black;
+    list-style-type: none;
+    padding-bottom: 5px;
+}
+
+#footer-top li {
+    font-size: x-small;
+}
+
+#footer-mid {
+    background: #73000A;
+    color: white;
+    font-size:x-large;
+    margin-top: 0px;
+    padding: 15px;
+}
+
+#footer-col-one {
+    flex: 50;
+}
+
+#footer-col-two {
+    flex: 33;
+}
+
+#footer-col-three {
+    flex: 17;
+}
+
+/*Typography*/
+
 @media only screen and (min-width: 768px) {
+    #whole-div {
+        margin-left: 2%;
+        margin-right: 2%;
+    }
+
     #header-top li, a {
         display: inline-block;
         color: #fff;
         list-style-type: none; /* Removes Bullet*/
         padding-bottom: 5px;
-        padding-right: 5px;
+        padding-right: 3px;
         text-decoration: none;
     }
     
     #header-top {
         position: absolute;
         right: 75px;
+    }
+
+    .columns {
+        display: flex;
+    }
+
+    .split {
+        flex: 1;
+    }
+
+    .one {
+        flex: 1;
+        padding-right: 15px;
+    }
+
+    .two {
+        flex: 3;
+    }
+
+    .two-one{
+        flex: 3;
+    }
+
+    .two-two {
+        flex: 1;
+    }
+
+    .menu a {
+        color: black;
+        flex: 1;
+        border-bottom: 2px solid lightgray;
+        font-weight: bold;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        font-size: large;
+    }
+
+    .second-menu a {
+        color: black;
+        font-weight: normal;
+        font-size: medium;
+    }
+
+    #selected a {
+        color: #76160A;
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .third-menu a {
+        color: black;
+        font-weight: bold;
     }
 }
