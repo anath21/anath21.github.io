@@ -28,6 +28,12 @@ body {
     font-size: x-small;
 }
 
+#header-top a {
+    position: relative;
+
+    color: white;
+}
+
 #header-bottom {
     background: #73000A;
     color: white;
@@ -71,22 +77,33 @@ body {
     font-weight: bold;
 }
 
-#footer {
-    background: #ECECEC;
-    display: flex;
-}
-
 #footer-top {
+    background: #ECECEC;
     color: black;
     list-style-type: none;
     padding-bottom: 5px;
+    margin: 0;
 }
 
 #footer-top li {
     font-size: x-small;
 }
 
-#footer-mid {
+#uofscbottomlogo {
+    height: 75px;
+    width: 250px;
+    position: relative;
+    left: 25%;
+}
+
+#bottomsocials {
+    position: relative;
+    top: 70px;
+    right: 25%;
+}
+
+#footer-mid,
+#footer-low {
     background: #73000A;
     color: white;
     font-size:x-large;
@@ -94,9 +111,42 @@ body {
     padding: 15px;
 }
 
+#footer-low {
+    display: flex;
+}
+
+#footer-header {
+    padding-top: 10px;
+    font-size: medium;
+    color: white;
+    margin-right: 20px;
+    margin-left: 40px;
+    border-bottom: solid white 2px;
+}
+
+#footer-links li {
+    font-size: small;
+    list-style-type: none;
+    margin: 5px;
+    padding-bottom: 2px;
+}
+
+#footer-links a {
+    color: white;
+    text-decoration: none;
+}
+
 #footer-col-one {
     flex: 50;
 }
+
+#footer-col-one-one,
+#footer-col-one-two,
+#footer-col-one-three{
+    flex: 1;
+    padding-bottom: 3px;
+}
+
 
 #footer-col-two {
     flex: 33;
@@ -178,5 +228,18 @@ body {
     .third-menu a {
         color: black;
         font-weight: bold;
+    }
+
+    #uofscbottomlogo {
+        width: 300px; 
+        height:75px;
+        position: relative;
+        left: 10px;
+    }
+
+    #bottomsocials {
+        position: relative;
+        top: 10px;
+        left: 500px;
     }
 }
