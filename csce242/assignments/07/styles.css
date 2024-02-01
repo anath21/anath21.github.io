@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: tan;
+}
+
+#main-header {
+    text-align: center;
+    color: turquoise;
+}
+
+#sub-header {
+    text-align: center;
+    color: teal;
+}
+
+#change-image {
+    border: solid 2px turquoise;
+    padding: 5px;
+    text-align: center;
+    background: tan;
+}
+
+#body-text {
+    text-align: left;
+    color: teal;
+}
+/* Structure */
+
+#content {
+    background: #fff;
+    padding: 5px;
+    width: 80%;
+    margin: auto;   /*Center horizontally*/
+    border-radius: 5px; /*Round the corners*/
+}
+
+#change-header {
+    text-align: center;
+    color: teal;
+}
+
+#image {
+    display: block;
+    margin: auto;
+    width: 200;
+    height: 250;
+}
+
+.hidden {
+    display: none;
+}
+
+/*Typography*/
+
+h1 {
+    color: gray;
+}
+
+.special {
+    background: lightpink;
+    size: 2em;
+    color: aqua;
+    border: 2px dotted magenta;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .columns {
+        display: flex;
+    }
+
+    #change-image {
+        flex: 1;
+        padding: 10px;
+        margin: 50px;
+    }
+
+}
