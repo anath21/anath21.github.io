@@ -1,30 +1,15 @@
 const changeImage = () => {
     const image = document.getElementById("strawberry");
     image.src = "images/blueberry.png";
+};
+
+const addStar = () => {
+    const starBox = document.getElementById("starbox");
+    const star = document.createElement("section");
+    star.add("images/star.png");
 }
 
-const doStuff = () =>{
-    const messageP = document.getElementById("message");
-    messageP.innerHTML = "Hello Ankit!";
-    messageP.classList.toggle("special");
-    //.add adds a class and .toggle adds and removes the class
-};
-
-const hideStrawberry = () => {
-    document.getElementById("strawberry").classList.add("hidden");
-};
-
 document.getElementById("strawberry").onclick = changeImage;
+document.getElementById("button-add-star").onclick = addCircle;
 
-//.scr= is how you replace the image
 
-
-/*
-const clickButton = document.getElementById("button-clickme");
-//Always use const unless it throws an error
-//links the button from the index.html page by its ID
-
-clickButton.onclick = doStuff;
-//When you want the function to work when you click then you dont
-//add the () because that always calls the funtion
-*/
