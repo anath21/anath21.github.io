@@ -18,22 +18,22 @@ const e1 = (e) => {
     let e1Image = document.getElementById("command-image");
     const userInput = document.getElementById("command").value;
 
-    if (userInput == 'b') {
+    if (e.key == 'b') {
         e1Image.src = "images/reading.png";
     } 
-    else if (userInput == 'c') {
+    else if (e.key == 'c') {
         e1Image.src = "images/clown.png";
     } 
-    else if (userInput == 'p') {
+    else if (e.key == 'p') {
         e1Image.src = "images/birthday.png";
     } 
-    else if (userInput == 'r') {
+    else if (e.key == 'r') {
         e1Image.src = "images/umbrella.png";
     } 
-    else if (userInput == 's') {
+    else if (e.key == 's') {
         e1Image.src = "images/shovel.png";
     } 
-    else if (userInput == 'w') {
+    else if (e.key == 'w') {
         e1Image.src = "images/gotowork.png";
     }
 };
