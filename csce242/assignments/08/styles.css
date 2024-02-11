@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: tan;
+    rotate: 65;
+}
+
+.button-exercise {
+    background-color: white;
+    border: none;
+    color: teal;
+    text-align: center;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+
+#nav-items ul {
+    text-align: center;
+}
+
+#e1::after {
+    content: "  |"
+}
+
+#hamburger {
+    padding: 10px;
+}
+  
+#hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: var(--a-color);
+    margin: 6px 0;
+}
+
+#nav-items li {
+    color: teal;
+    text-align: center;
+    display: block;
+}
+  
+ul {
+    list-style-type: none;
+  }
+
+#main-header {
+    text-align: center;
+    color: turquoise;
+}
+
+#sub-header {
+    text-align: center;
+    color: teal;
+}
+
+#change-image,
+#yoga {
+    border: solid 2px turquoise;
+    padding: 5px;
+    text-align: center;
+    background: tan;
+}
+
+#e1-list {
+    text-align:center;
+    color: teal;
+    list-style-type: none;
+}
+
+/* Structure */
+
+#content {
+    background: #fff;
+    padding: 5px;
+    width: 80%;
+    margin: auto;   /*Center horizontally*/
+    border-radius: 5px; /*Round the corners*/
+}
+
+#change-header {
+    text-align: center;
+    color: teal;
+}
+
+/*Typography*/
+
+h1 {
+    color: gray;
+    text-decoration: underline;
+}
+
+@media only screen and (min-width: 768px) {
+
+    .columns {
+        display: flex;
+    }
+
+    #change-image,
+    #yoga {
+        flex: 1;
+        padding: 10px;
+        margin: 50px;
+    }
+    
+    #hamburger {
+        display: none;
+    }
+
+}

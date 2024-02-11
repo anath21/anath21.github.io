@@ -11,7 +11,7 @@ const addStar = () => {
 }
 
 const rotateImage = () => {
-    var slider = document.getElementById("myRange");
+    let slider = document.getElementById("myRange");
     const image = document.getElementById("image");
 
     slider.addEventListener("input", () => {

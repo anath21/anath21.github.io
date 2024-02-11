@@ -1,0 +1,62 @@
+:root {
+    --funds: 0%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: lightgray;
+}
+
+/* Structure */
+
+#content {
+  background: #fff;
+  padding: 5px;
+  width: 80%;
+  /* center horizontally */
+  margin: auto;
+  border-radius: 5px;
+}
+
+.columns section {
+  padding: 10px;
+}
+
+/*Gradient */
+#rainbow {
+    width: 80%;
+    margin: auto;
+    height: 300px;
+    background: linear-gradient(45deg, red 15%, orange 30%, yellow 45%, green 60%, blue 75%, indigo 90%, violet 100%);  
+        /*you can change the degree to change the rotation and if you make red 15% then you can make orange 15% 30% to make a hard stop
+        and make red go till 15% and orange only go from 15% to 30%*/
+}
+
+#thermometer {
+    background: linear-gradient(0deg, red var(--funds), white var(--funds) 100%);
+    height: 200px;
+    border: 2px solid black;
+    width: 50px;
+}
+
+/* Typography */
+
+h1 {
+  color: darkslategray;
+}
+
+.error {
+    color: red;;
+}
+
+/* Larger Resolutions */
+
+@media only screen and (min-width: 600px) {
+  .columns {
+    display: flex;
+  }
+
+  .one {
+    flex: 1;
+  }
+}
