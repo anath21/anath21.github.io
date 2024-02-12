@@ -14,7 +14,6 @@ body {
 }
 
 
-
 #nav-items ul {
     text-align: center;
 }
@@ -82,6 +81,33 @@ ul {
     text-align: center;
     color: teal;
 }
+
+.hamburger-menu {
+    display: inline-block;
+    cursor: pointer;
+    font-size: 24px;
+  }
+
+  .hamburger-menu.active {
+    transform: rotate(180deg);
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu.active {
+    display: block;
+  }
+
+  .menu-item-1,
+  .menu-item-2 {
+    padding: 10px;
+    background-color: tan;
+    border: 1px solid teal;
+    text-align: center;
+    text-decoration: none;
+  }
 
 /*Typography*/
 

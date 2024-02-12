@@ -3,16 +3,13 @@ const toggleHamburger = () => {
     document.getElementById("nav-items").classList.toggle("hide");
 };
   
-window.onload = () => {
-    document.getElementById("hamburger").onclick = toggleHamburger;
-};
+function toggleMenu() {
+    var menu = document.getElementById('menu');
+    var hamburgerMenu = document.querySelector('.hamburger-menu');
 
-const select = () => {
-    const exercise1 = document.getElementById("change-image");
-    const exercise2 = document.getElementById("yoga");
-
-    exercise1.classList.toggle("hide");
-};
+    menu.classList.toggle('active');
+    hamburgerMenu.classList.toggle('active');
+  }
 
 const e1 = (e) => {
     let e1Image = document.getElementById("command-image");
@@ -79,4 +76,3 @@ const e2 = () => {
 
 document.getElementById("command").onkeyup = e1;
 document.getElementById("myRange").oninput = e2;
-document.getElementById("e1").onclick = select
