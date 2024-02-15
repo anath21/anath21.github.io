@@ -77,10 +77,6 @@ body {
     max-width: 100%;
   }
 
-  #featured-top-row {
-    display: flex;
-  }
-
   #top-one,
   #top-two,
   #top-three,
@@ -188,6 +184,10 @@ body {
     #main-image {
       max-width: 100%;
       padding-top: 10px;
+    }
+
+    #featured-top-row {
+      display: flex;
     }
 
     #about-top {
