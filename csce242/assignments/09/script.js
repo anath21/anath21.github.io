@@ -1,27 +1,33 @@
 let moveBall;
 let pos = 10;
-let up = 10;
+let move = true;
 
 const bounceBall = (e) => {
 
         const ball = document.getElementById("ball");
         const ballHeight = document.getElementById("ball").style.height;
-        const divHeight = document.getElementById("bounce-ball").style.height;
     
         if(e.target.innerHTML.toLowerCase() == "start") {
             e.target.innerHTML = "Stop";
             //setInterval has 2 params 1st is the funtion it calls and 2nd is how often it gets called
         moveBall = setInterval(()=>{
-            pos += 1;
-            up -= 1;
-            console.log(divHeight + "test");
             const root = document.querySelector(":root");
-                if(ballHeight <= 350) {
-                    root.style.setProperty("--ball-height", pos + "px");
+
+            if(move == false) {
+                pos += -3;
+                root.style.setProperty("--ball-height", pos + "px");
+
+                if(pos <= 10) {
+                    move = true;
                 }
-                else {
-                    root.style.setProperty("--ball-height", up + "px" );
+            }
+            else {
+                pos += 3;
+                root.style.setProperty("--ball-height", pos + "px");
+                if(pos >= 350) {
+                    move = false;
                 }
+            }
                 
         }, 50);
         } else {
@@ -30,17 +36,30 @@ const bounceBall = (e) => {
         }
 };
 
+
+
+let lastClicked = -1; 
+
 const showDetails = (e) => {
-    /*
-    I coulnd't get it to display beside the image so i just did a console.log 
-    const yogaText = document.getElementById("yoga-text");
-    yogaText.innerHTML(e.target.getAttribute("rel"));
-    */
-   console.log(e.target.getAttribute("rel"));
+    const yogaImage = document.querySelectorAll("#yoga-list img");
+
+    let clicked = 0;
+    for(let i = 0; i < yogaImage.length; i++) {
+        if(yogaImage[i] == e.target) {
+            clicked = i;
+            break;
+        }
+    }
+
+    const yogaText = document.getElementById("yoga" + (clicked + 1));
+
+    if (yogaText && clicked !== lastClicked) {
+        yogaText.textContent = e.target.getAttribute("rel");
+        lastClicked = clicked;
+    }
 };
 
 document.getElementById("button-bounce").onclick = bounceBall;
-document.querySelectorAll("#yoga-list li").forEach((li)=>{
-    li.onclick = showDetails;
+document.querySelectorAll("#yoga-list img").forEach((img)=>{
+    img.onclick = showDetails;
 });
-

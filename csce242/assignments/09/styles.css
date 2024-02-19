@@ -33,6 +33,10 @@ body {
     top: var(--ball-height);
 }
 
+.list {
+    display: flex;
+}
+
 #yoga-list {
     list-style-type: none;
 }
