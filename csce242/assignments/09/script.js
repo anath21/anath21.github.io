@@ -14,7 +14,7 @@ const bounceBall = (e) => {
             const root = document.querySelector(":root");
 
             if(move == false) {
-                pos += -3;
+                pos += -1;
                 root.style.setProperty("--ball-height", pos + "px");
 
                 if(pos <= 10) {
@@ -22,14 +22,14 @@ const bounceBall = (e) => {
                 }
             }
             else {
-                pos += 3;
+                pos += 1;
                 root.style.setProperty("--ball-height", pos + "px");
                 if(pos >= 350) {
                     move = false;
                 }
             }
                 
-        }, 50);
+        }, 5);
         } else {
             e.target.innerHTML = "Start";
             clearInterval(moveBall);
