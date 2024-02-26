@@ -2,6 +2,7 @@
   --background-color: white;
   --nav-color: #EFCA74;
   --a-color: black;
+  --header-color: tan;
 }
 
 body {
@@ -11,6 +12,11 @@ body {
   .header {
     display: flex;
     padding-bottom: 20px;
+    background: var(--header-color);
+  }
+
+  #main {
+    background: var(--header-color);
   }
 
   #logo,
