@@ -1,0 +1,109 @@
+h1 {
+    color: teal;
+}
+
+body {
+    background: blanchedalmond;
+}
+
+h3 {
+    text-align: center;
+    margin-top: 0;
+    color: white;
+    background-color: brown;
+    max-width: fit-content;
+}
+
+section {
+    border: 1px solid black;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.house-plan-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.house-plan-details {
+    display: flex;
+}
+
+.house-plan-details section {
+    margin-right: 20px;
+}
+
+.house-plan-details img {
+    max-width: 100%;
+}
+
+.house-plan-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.house-plan-images img {
+    max-width: 100%;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.blueprint-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.blueprint-name {
+    margin-bottom: 10px;
+}
+
+.blueprint-images {
+    display: flex;
+    margin-top: 10px;
+}
+
+.blueprint-images img {
+    max-width: 30%; 
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+
+
+
+
+/*
+
+.house-plan-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.house-plan-details {
+    display: flex;
+    flex: 1;
+    margin-top: 10px;
+}
+
+.house-plan-details section {
+    margin-right: 20px;
+}
+
+.house-plan-details img {
+    max-width: 100%;
+}
+
+.house-plan-images {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+.house-plan-images img {
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+*/
