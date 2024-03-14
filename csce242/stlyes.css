@@ -26,6 +26,10 @@ body {
     align-content: center;
 }
 
+#server {
+    text-align: center;
+}
+
 /*Typography*/
 
 h1 {
