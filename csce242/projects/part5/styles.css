@@ -141,6 +141,56 @@ body {
   #review {
     padding-right: 20px;
   }
+
+  .property-listing {
+    
+    margin-bottom: 20px;
+  }
+  
+  .property-image {
+    width: 150px;
+    height: 150px;
+    margin-right: 20px;
+  }
+  
+  .property-details {
+    flex: 1;
+  }
+  
+  .property-address {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .property-description {
+    margin-bottom: 10px;
+    padding: 5px;
+    border: var(--a-color) 2px solid;
+  }
+  
+  .property-info {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .property-info li {
+    margin-bottom: 5px;
+  }
+  
+  .school-header {
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  .school-list {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .school-list li {
+    margin-bottom: 5px;
+  }
+  
   
   @media screen and (min-width: 768px) {
     #hamburger {
@@ -181,7 +231,9 @@ body {
     }
   
     #scarlet-left,
-    #scarlet-right {
+    #scarlet-right,
+    #spartan-right,
+    #spartan-left {
       padding: 5px;
       flex: 1;
     }
