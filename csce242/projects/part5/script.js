@@ -10,7 +10,7 @@ const toggleHamburger = () => {
     const propertyListings = document.getElementById('featured-content');
   
     try {
-      const response = await fetch('properties.json');
+      const response = await fetch('https://github.com/anath21/anath21.github.io/blob/main/csce242/projects/part5/propertues.json');
       const data = await response.json();
   
       data.forEach(property => {
