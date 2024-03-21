@@ -68,14 +68,25 @@
                     <p>105 Morning Shore Ct</p>
                 </section>
             </div>
-            
-            <div>
-                <section id="house-list"></section>
-                <button id="add-house-btn">Click To Add A House</button>
+            <button id="add-house-btn">Click To Add A House:</button>
+            <div id="house-form" class="hide">
+                <label for="address" >Address:</label>
+                <input type="text" id="address" name="address" required><br>
+                <label for="bathrooms">Bathrooms:</label>
+                <input type="number" id="bathrooms" name="bathrooms" min="1" required><br>
+                <label for="bedrooms">Bedrooms:</label>
+                <input type="number" id="bedrooms" name="bedrooms" min="1" required><br>
+                <label for="squareFootage">Square Footage:</label>
+                <input type="number" id="squareFootage" name="squareFootage" min="500" required><br>
+                <label for="nextOpenHouse">Next Open House:</label>
+                <input type="date" id="nextOpenHouse" name="nextOpenHouse" required><br>
+                <button id="submit-house-btn" type="submit">Add House</button>
             </div>
+            
+            <div id="new-house"></div>
+
         </div>
     </div>
-    <div id="modal-container"></div>
     <script src="script.js"></script>
   </body>
 </html>

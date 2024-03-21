@@ -1,3 +1,5 @@
+document.addEventListener('DOMContentLoaded', () => {
+
 const toggleHamburger = () => {
     document.getElementById("nav-items").classList.toggle("hide");
   };
@@ -61,23 +63,23 @@ const toggleHamburger = () => {
     return listingDiv;
   };  
 
-  const result = document.getElementById("result");
 
-  const showEmailResult = async(e) => {
+  const showEmailResult = async (e) => {
     e.preventDefault();
 
     let response = await getEmailResult();
 
-    if(response.status == 200) {
-        result.innerHTML = "Email was successfully sent :) "
+    if (response.status == 200) {
+        result.innerHTML = "Email was successfully sent :) ";
     } else {
-        result.innerHTML = "Sorry the email couldn't be sent :( "
+        result.innerHTML = "Sorry the email couldn't be sent :( ";
     }
-
 };
 
-const getEmailResult = async() => {
+const result = document.getElementById("result"); 
 
+const getEmailResult = async (e) => {
+  e.preventDefault();
     const form = document.getElementById("contact-form");
     const formData = new FormData(form);
     const object = Object.fromEntries(formData);
@@ -86,89 +88,85 @@ const getEmailResult = async() => {
 
     try {
         const response = await fetch("https://api.web3forms.com/submit", {
-            method:"POST",
-            headers:{
-                "Content-Type":"application/json",
-                Accept:"application.json"
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
             },
-            body:json
+            body: json,
         });
 
         return response;
-    } catch(error) {
+    } catch (error) {
         console.log(error);
-        result.innerHTML = "Sorry the email couldn't be sent :( ";
+        result.innerHTML = "Sorry, the email couldn't be sent :(";
     }
 };
 
-document.getElementById("contact-form").onsubmit = showEmailResult;
+//const submit = document.getElementById("submit");
+//document.getElementById("submit").onsubmit = showEmailResult;
+
+//submit.addEventListener('onsubmit',showEmailResult());
 
 
 
 
-
-
-document.getElementById("add-house-btn").addEventListener('click', function() {
-  showHouseFormModal();
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById("contact-form").addEventListener('submit', showEmailResult);
 });
 
-function showHouseFormModal() {
-  const modal = document.createElement("div");
-  modal.classList.add("modal");
-  modal.addEventListener('click', () => modal.remove());
 
-  const modalContent = document.createElement("div");
-  modalContent.classList.add("modal-content");
 
-  const close = document.createElement("span");
-  close.classList.add("close");
-  close.innerHTML = "&times;";
-  close.addEventListener('click', () => modal.remove());
-  modalContent.append(close);
 
-  const form = document.createElement("form");
-  form.id = "add-house-form";
-  form.innerHTML = `
-      <label for="address">Address:</label>
-      <input type="text" id="address" name="address" required><br>
-      <label for="bathrooms">Bathrooms:</label>
-      <input type="number" id="bathrooms" name="bathrooms" required><br>
-      <label for="bedrooms">Bedrooms:</label>
-      <input type="number" id="bedrooms" name="bedrooms" required><br>
-      <label for="squareFootage">Square Footage:</label>
-      <input type="number" id="squareFootage" name="squareFootage" required><br>
-      <label for="nextOpenHouse">Next Open House:</label>
-      <input type="date" id="nextOpenHouse" name="nextOpenHouse" required><br>
-      <button type="submit">Add House</button>
-  `;
-  modalContent.appendChild(form);
 
-  modal.append(modalContent);
-  document.body.appendChild(modal);
-
-  form.addEventListener('submit', function(event) {
-      event.preventDefault(); // Prevent default form submission
-
-      const formData = new FormData(form);
-      const address = formData.get('address');
-      const bathrooms = formData.get('bathrooms');
-      const bedrooms = formData.get('bedrooms');
-      const squareFootage = formData.get('squareFootage');
-      const nextOpenHouse = formData.get('nextOpenHouse');
-
-      // Display the entered information on the page
-      const houseList = document.getElementById("house-list");
-      const newHouse = document.createElement("div");
-      newHouse.classList.add("house");
-      newHouse.innerHTML = `
-          <h3>${address}</h3>
-          <p><strong>Bathrooms:</strong> ${bathrooms}</p>
-          <p><strong>Bedrooms:</strong> ${bedrooms}</p>
-          <p><strong>Square Footage:</strong> ${squareFootage}</p>
-          <p><strong>Next Open House:</strong> ${nextOpenHouse}</p>
-      `;
-      houseList.appendChild(newHouse);
-
-      modal.remove(); // Remove the modal after submission
-  });
+const openHouseFormPopup = () => {
+  const houseForm = document.getElementById("house-form");
+  houseForm.classList.remove("hide"); 
 };
+
+document.getElementById("add-house-btn").addEventListener("click", openHouseFormPopup);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  //document.getElementById("house-form").addEventListener("submit", function(event) {
+    //event.preventDefault(); 
+    document.getElementById("submit-house-btn").onclick = () => {
+    const address = document.getElementById("address").value;
+    const bathrooms = document.getElementById("bathrooms").value;
+    const bedrooms = document.getElementById("bedrooms").value;
+    const squareFootage = document.getElementById("squareFootage").value;
+    const nextOpenHouse = document.getElementById("nextOpenHouse").value;
+    const newHouse = document.getElementById("new-house");
+
+    newHouse.innerHTML = `
+    <div class="house">
+        <h3>${address}</h3>
+        <p><strong>Bathrooms:</strong> ${bathrooms}</p>
+        <p><strong>Bedrooms:</strong> ${bedrooms}</p>
+        <p><strong>Square Footage:</strong> ${squareFootage}</p>
+        <p><strong>Next Open House:</strong> ${nextOpenHouse}</p>
+    </div>
+    `;
+    
+    /*
+    const newHouseHTML = `
+        <div class="house">
+            <h3>${address}</h3>
+            <p><strong>Bathrooms:</strong> ${bathrooms}</p>
+            <p><strong>Bedrooms:</strong> ${bedrooms}</p>
+            <p><strong>Square Footage:</strong> ${squareFootage}</p>
+            <p><strong>Next Open House:</strong> ${nextOpenHouse}</p>
+        </div>
+    `;
+    document.getElementById("new-house").innerHTML += newHouseHTML; 
+    */
+
+    document.getElementById("house-form").classList.add("hide");
+    }
+//});
+
+});
+
+
+
+});

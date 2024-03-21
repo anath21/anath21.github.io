@@ -196,6 +196,25 @@ body {
     margin-bottom: 10px;
     padding: 5px;
   }
+
+  .popup {
+    background-color: var(--nav-color);
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    padding: 10px; /* Adjust padding as needed */
+    border: 2px solid var(--a-color);
+    display: none; /* Initially hide the popup */
+  }
+
+
+#house-form {
+  margin: 5px;
+}
+
   
   @media screen and (min-width: 768px) {
     #hamburger {
